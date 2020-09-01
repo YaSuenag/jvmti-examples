@@ -44,10 +44,10 @@ Linux を例に示します。Windows ではパスや DLL 名に置き換えて�
 $ java -agentpath:/path/to/libhelloworld.so --version
 ```
 
-### `LD_LIBRARY_PATH` で `libhelloworld.so` が通っている場合
+### `LD_LIBRARY_PATH` などで `libhelloworld.so` にライブラリパスが通っている場合
 
 ```
-$ java -agentpath:/path/to/libhelloworld.so --version
+$ java -agentlib:helloworld --version
 ```
 
 ## 動的アタッチ
@@ -68,4 +68,4 @@ Hello World from Agent_OnLoad()
   options = error
 Error occurred during initialization of VM
 agent library failed to init: /path/to/libhelloworld.so
-``
+```

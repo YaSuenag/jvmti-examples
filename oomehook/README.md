@@ -57,3 +57,12 @@ jcmd を使って動的に JVMTI エージェントをロードします。
 ```
 $ jcmd <PID> JVMTI.agent_load /path/to/liboomehook.so
 ```
+
+# テスト
+
+[oome-examples](oome-examples) を使うことで、このエージェントの動きを簡単に試すことができます。
+
+```
+$ export JAVA_HOME=/path/to/jdk
+$ ./run.sh /path/to/liboomehook.so
+```

@@ -16,7 +16,7 @@ void JNICALL OnGarbageCollectionStart(jvmtiEnv *jvmti){
 }
 
 void JNICALL OnGarbageCollectionFinish(jvmtiEnv *jvmti){
-  std::cout << "from JVMTI: GC start" << std::endl;
+  std::cout << "from JVMTI: GC finish" << std::endl;
 }
 
 static void ShowJVMTIError(jvmtiEnv *jvmti, jvmtiError value){

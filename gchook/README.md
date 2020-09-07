@@ -77,7 +77,7 @@ from JVMTI: GC start
 from JVMTI: Sleep 10 secs in GarbageCollectionStart()...
 from JVMTI: Resume from sleep
 [10.029s][info][gc       ] GC(0) Pause Full (System.gc()) 1M->0M(10M) 1.820ms
-from JVMTI: GC start
+from JVMTI: GC finish
 [10.029s][info][safepoint] Leaving safepoint region
 [10.029s][info][safepoint] Total time for which application threads were stopped: 10.0031141 seconds, Stopping threads took: 0.0000172 seconds
       :

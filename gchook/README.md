@@ -85,7 +85,7 @@ from JVMTI: GC finish
 
 `GC(0) Pause Full` のエントリでは GC 時間が 1.820ms と報告されているにもかかわらず、 `Total time for which application threads were stopped` のエントリで報告されているアプリケーション停止時間は 10 秒になっています。
 
-# GarbageCollection{Start,Stop} と RawMonitor のサンプル
+# GarbageCollectionStart と RawMonitor のサンプル
 
 このサンプルに、GarbageCollectionStart のフック処理を別スレッドで行う場合のサンプルです。
 

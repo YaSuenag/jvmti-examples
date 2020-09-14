@@ -84,3 +84,13 @@ from JVMTI: GC finish
 ```
 
 `GC(0) Pause Full` のエントリでは GC 時間が 1.820ms と報告されているにもかかわらず、 `Total time for which application threads were stopped` のエントリで報告されているアプリケーション停止時間は 10 秒になっています。
+
+# GarbageCollection{Start,Stop} と RawMonitor のサンプル
+
+このサンプルに、GarbageCollectionStart のフック処理を別スレッドで行う場合のサンプルです。
+
+* [rawmonitor](rawmonitor)
+* GarbageCollectionStart イベント発生時に、RawMonitor で待ち構えている別スレッドの処理を開始します
+* Safepoint 中なので、このサンプルにあるように `NewStringUTF()` など Java ヒープを触ろうとすると STW に巻き込まれます
+    * `NewStringUTF()` のコメントアウトを解除して、かつ `suspend` オプションをつけて実行すると、止まっている様子がわかります
+* 動的アタッチ未対応
